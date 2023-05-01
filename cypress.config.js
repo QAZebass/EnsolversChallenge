@@ -6,6 +6,7 @@ export default defineConfig({
 	viewportWidth: 1360,
 	viewportHeight: 768,
 	reporter: 'cypress-multi-reporters',
+	video: false,
 	retries: 1,
 	reporterOptions: {
 		configFile: 'jsconfig.json',
