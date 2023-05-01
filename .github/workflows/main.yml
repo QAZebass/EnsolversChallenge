@@ -1,0 +1,32 @@
+name: Ensolvers Challenge
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    checkout-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out repository code
+              uses: actions/checkout@v2
+
+            - name: Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-verion: 16
+
+            - name: Install all dependencies
+              run: |
+                  npm install
+                  npm list
+
+            - name: run cypress tests with chrome
+              uses: cypress-io/github-action@v4
+              with:
+                  browser: chrome
+                  command: |
+                      npm run file cypress/e2e/Ensolvers/EnsolversChallenge.cy.js

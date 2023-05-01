@@ -1,0 +1,27 @@
+{
+	"name": "ensolvers-challenge",
+	"version": "1.0.0",
+	"description": "Test cases for Ensolvers Challenge",
+	"main": "index.js",
+	"scripts": {
+		"test": "cypress open",
+		"file": "cypress run --browser chrome --reporter cypress-multi-reporters --reporter-options configFile=jsconfig.json --record --key f761e2ba-d419-451b-8faa-616d8ad679c9 --spec"
+	},
+	"author": "Sebastian Avila-QA",
+	"type": "module",
+	"license": "ISC",
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "5.53.0",
+		"cypress": "12.11.0",
+		"cypress-multi-reporters": "1.6.3",
+		"eslint": "8.34.0",
+		"eslint-plugin-only-warn": "1.1.0",
+		"faker": "5.5.3",
+		"mocha": "10.2.0",
+		"prettier": "2.8.4"
+	},
+	"keywords": [],
+	"devDependencies": {
+		"@types/faker": "^6.6.9"
+	}
+}
