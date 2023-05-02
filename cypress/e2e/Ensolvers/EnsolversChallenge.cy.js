@@ -25,7 +25,6 @@ describe('Ensolvers Challenge', () => {
 		todoitems.clickoncreateNewitem();
 		todoitems.get.titlelabel().should('exist').and('have.text', 'Title');
 		todoitems.get.todoTitleInput().type('New Title for Item', { delay: 50 });
-
 		todoitems.get.descriptionlabel().should('exist').and('have.text', 'Description');
 		todoitems.inputItemDescription(faker.lorem.sentence());
 		todoitems.get.folderlabel().should('exist').and('have.text', 'Folder');
