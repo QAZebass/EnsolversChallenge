@@ -5,6 +5,8 @@ let credentials;
 
 describe('Ensolvers Challenge', () => {
 	beforeEach('Preconditions', () => {
+		cy.clearAllLocalStorage();
+		cy.clearAllCookies();
 		cy.visit('/');
 		cy.fixture('login.json').then(data => {
 			credentials = data;
